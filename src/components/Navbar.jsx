@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 60);
       const sections = ['home', 'services', 'about', 'projects', 'skills', 'faq', 'contact'];
       let current = 'home';
       for (const section of sections) {
@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="nav-inner">
 
-        {/* LEFT: Avatar + "Available for work" — all in the same pill */}
+        {/* LEFT: Avatar + "Available for work" — always visible */}
         <div className="nav-available">
           <img
             src={heroImage}
@@ -49,25 +49,26 @@ const Navbar = () => {
           <span className="nav-available-dot" />
         </div>
 
-        {/* Divider */}
-        <div className="nav-divider" />
+        {/* Collapsible section: divider + links + contact */}
+        <div className="nav-expandable">
+          <div className="nav-divider" />
 
-        {/* CENTER: Nav links */}
-        <ul className="nav-links">
-          {navLinks.map((link) => (
-            <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <ul className="nav-links">
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* RIGHT: Contact button */}
-        <a href="#contact" className="nav-contact-btn">Contact</a>
+          <a href="#contact" className="nav-contact-btn">Contact</a>
+        </div>
+
       </div>
     </motion.nav>
   );
