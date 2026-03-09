@@ -181,6 +181,37 @@
     transform: scale(0.97);
 }
 
+/* Row holding MY STORY + VIEW RESUME */
+.about-action-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Resume button */
+.about-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 26px;
+    border-radius: 100px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    border: 1.5px solid var(--accent);
+}
+
+.about-resume-btn:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-light);
+    transform: scale(0.97);
+}
+
 /* ── RIGHT: Portrait ── */
 .about-right {
     display: flex;

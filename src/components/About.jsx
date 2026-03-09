@@ -126,12 +126,22 @@ const About = () => {
                         {/* Social icons */}
                         <div className="about-socials">
                             <a href="mailto:sooryadefence@gmail.com" className="about-social-btn" aria-label="Email"><Mail size={15} /></a>
-                            <a href="https://github.com/" target="_blank" rel="noreferrer" className="about-social-btn" aria-label="GitHub"><Github size={15} /></a>
-                            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="about-social-btn" aria-label="LinkedIn"><Linkedin size={15} /></a>
-                            <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="about-social-btn" aria-label="Twitter"><Twitter size={15} /></a>
+                            <a href="https://github.com/SooryaD/portfolio" target="_blank" rel="noreferrer" className="about-social-btn" aria-label="GitHub"><Github size={15} /></a>
+                            <a href="https://www.linkedin.com/in/soorya-durairaj-b44700288" target="_blank" rel="noreferrer" className="about-social-btn" aria-label="LinkedIn"><Linkedin size={15} /></a>
+                            <a href="https://twitter.com/Soorya_Durairaj" target="_blank" rel="noreferrer" className="about-social-btn" aria-label="Twitter"><Twitter size={15} /></a>
                         </div>
 
-                        <button className="about-story-btn">MY STORY</button>
+                        <div className="about-action-row">
+                            <button className="about-story-btn">MY STORY</button>
+                            <a
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="about-resume-btn"
+                            >
+                                VIEW RESUME
+                            </a>
+                        </div>
                     </motion.div>
 
                     {/* Right: portrait */}
