@@ -108,9 +108,9 @@ const Contact = () => {
                 <div className="contact-footer-bar">
                     <p className="contact-copy">© 2026 SOORYA DURAIRAJ</p>
                     <div className="contact-socials">
-                        <a href="https://twitter.com" target="_blank" rel="noreferrer">X / TWITTER</a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer">LINKEDIN</a>
-                        <a href="https://github.com" target="_blank" rel="noreferrer">GITHUB</a>
+                        <a href="https://twitter.com/Soorya_Durairaj" target="_blank" rel="noreferrer">X / TWITTER</a>
+                        <a href="https://www.linkedin.com/in/soorya-durairaj-b44700288" target="_blank" rel="noreferrer">LINKEDIN</a>
+                        <a href="https://github.com/SooryaD/portfolio" target="_blank" rel="noreferrer">GITHUB</a>
                     </div>
                 </div>
             </div>
