@@ -1,0 +1,242 @@
+/* ─── About Section ─── */
+.about-section {
+    background: var(--bg);
+}
+
+.about-heading {
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.about-intro {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 56px;
+}
+
+/* Bio paragraph */
+.about-bio {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 440px;
+}
+
+/* Certifications block */
+.about-certs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.about-certs-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.about-cert-item {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-cert-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* Two-column layout */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+/* ── LEFT ── */
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+/* Stats */
+.about-stats {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-num {
+    font-size: clamp(52px, 7vw, 90px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+}
+
+.stat-plus {
+    font-size: 0.55em;
+    vertical-align: super;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+/* Contact info */
+.about-contact-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.about-contact-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.about-contact-val {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Social icons */
+.about-socials {
+    display: flex;
+    gap: 8px;
+}
+
+.about-social-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--card-alt);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+}
+
+.about-social-btn:hover {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+    transform: translateY(-2px);
+}
+
+/* MY STORY button */
+.about-story-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 26px;
+    border-radius: 100px;
+    border: 1.5px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.about-story-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: scale(0.97);
+}
+
+/* ── RIGHT: Portrait ── */
+.about-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-portrait-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.about-portrait-img {
+    width: 380px;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 28px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+.about-hi-badge {
+    position: absolute;
+    top: 28px;
+    left: -24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 10px 30px rgba(94, 106, 210, 0.4);
+}
+
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-right {
+        justify-content: center;
+    }
+
+    .about-portrait-img {
+        width: 100%;
+        max-width: 320px;
+        height: 380px;
+    }
+
+    .about-hi-badge {
+        left: auto;
+        right: 16px;
+        top: 16px;
+    }
+}

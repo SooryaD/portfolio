@@ -1,0 +1,161 @@
+/* ─── Services Section ─── */
+.services-section {
+    background: var(--bg);
+}
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Left */
+.services-header {
+    margin-bottom: 40px;
+}
+
+.services-title {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.services-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Accordion */
+.accordion-item {
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.accordion-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.accordion-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+.accordion-trigger:hover .accordion-title {
+    color: var(--accent);
+}
+
+.accordion-num-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.accordion-num {
+    font-size: 13px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.accordion-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.accordion-item.open .accordion-title {
+    color: var(--text);
+}
+
+.accordion-chevron {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+.accordion-item.open .accordion-chevron {
+    color: var(--accent);
+}
+
+/* Body */
+.accordion-body {
+    overflow: hidden;
+}
+
+.accordion-sub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.accordion-sub-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.check-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Right 3D tilted image */
+.services-right {
+    position: sticky;
+    top: 120px;
+}
+
+.services-img-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) rotate(-2deg);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services-img-wrapper:hover {
+    transform: perspective(1000px) rotateY(-8deg) rotateX(2deg) rotate(-1deg);
+}
+
+.services-img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .services-right {
+        position: static;
+    }
+
+    .services-img-wrapper {
+        transform: none;
+    }
+
+    .services-img {
+        height: 260px;
+    }
+}

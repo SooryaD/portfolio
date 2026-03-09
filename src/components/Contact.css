@@ -1,0 +1,212 @@
+/* ─── Contact Section ─── */
+.contact-section {
+    background: var(--bg);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+/* Portrait */
+.contact-portrait-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.contact-portrait {
+    width: 100%;
+    max-width: 360px;
+    height: 480px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 32px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+.contact-hi-badge {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(94, 106, 210, 0.4);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Contact info list below portrait */
+.contact-info-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.contact-info-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Form */
+.contact-title {
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.contact-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    background: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    resize: none;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: var(--text-light);
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(94, 106, 210, 0.12);
+}
+
+.contact-field select option {
+    background: var(--card);
+    color: var(--text);
+}
+
+.contact-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    align-self: flex-start;
+    letter-spacing: 0.02em;
+}
+
+.contact-submit-btn:hover {
+    opacity: 0.75;
+    transform: scale(0.97);
+}
+
+/* Footer bar */
+.contact-footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 24px;
+}
+
+.contact-socials a {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.contact-socials a:hover {
+    color: var(--accent);
+}
+
+.contact-copy {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .contact-portrait {
+        max-width: 100%;
+        height: 360px;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr;
+    }
+}

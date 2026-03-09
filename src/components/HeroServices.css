@@ -1,0 +1,49 @@
+/* ─── Shared Hero + Services GSAP Container ─── */
+.hero-services-wrapper {
+    position: relative;
+    perspective: 2000px;
+}
+
+.flip-card-3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 24px;
+    overflow: visible;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    /* Modern 3D core mechanism */
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    /* Flipped 180deg to start, so when the parent rotates 180, this becomes 0 and shows */
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img,
+.flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
