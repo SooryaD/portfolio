@@ -6,7 +6,7 @@ import './Projects.css';
 const projects = [
     {
         title: 'PROJECT TRACKING SYSTEM',
-        category: 'Flutter · REST API',
+        category: 'React.js · MySQL · Node.js ',
         description: 'A project management and tracking application designed to monitor project progress, manage tasks, and improve workflow efficiency for teams.',
         image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1400&auto=format&fit=crop',
     },
